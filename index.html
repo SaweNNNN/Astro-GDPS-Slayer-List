@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>AstroGDPS Slayer List SaweN's Edition</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg1:#0a0a0a;
+  --bg2:#111;
+  --glass:rgba(255,255,255,0.06);
+  --border:rgba(255,255,255,0.12);
+  --accent:#fff;
+  --shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+body{
+  margin:0;
+  font-family:Roboto, sans-serif;
+  background: radial-gradient(circle at top, var(--bg2), var(--bg1));
+  color:#fff;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* grid background */
+.bg{
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size:60px 60px;
+  transform: perspective(900px) rotateX(60deg) translateY(-120px);
+  opacity:0.12;
+  pointer-events:none;
+}
+
+/* HEADER */
+.top{
+  position:sticky;
+  top:0;
+  z-index:10;
+  padding:14px 18px;
+  backdrop-filter: blur(18px);
+  background:rgba(0,0,0,0.55);
+  border-bottom:1px solid var(--border);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow: var(--shadow);
+}
+
+.logo{
+  font-family:Anton;
+  font-size:20px;
+  letter-spacing:2px;
+}
+
+/* FAQ */
+.faq{
+  padding:8px 12px;
+  border-radius:10px;
+  border:1px solid #fff;
+  background:transparent;
+  color:#fff;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.faq:hover{
+  transform:translateY(-2px);
+}
+
+/* LIST */
+.container{
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+/* CARD */
+.card{
+  background:var(--glass);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow: var(--shadow);
+  transition:0.25s;
+  backdrop-filter: blur(12px);
+}
+
+.card:hover{
+  transform:translateY(-3px) scale(1.01);
+}
+
+.rank{
+  font-family:Anton;
+  font-size:30px;
+  width:60px;
+  color:#fff;
+  opacity:0.9;
+}
+
+.name{
+  flex:1;
+  font-family:Anton;
+  font-size:24px;
+  letter-spacing:1px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.points{
+  font-family:Anton;
+  font-size:24px;
+  color:#fff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="top">
+  <div class="logo">AstroGDPS Slayer List SaweN's Edition</div>
+
+  <button class="faq" onclick="window.location.href='https://example.com'">
+    Read FAQ
+  </button>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <div class="rank">1</div>
+    <div class="name">CrazyMonster</div>
+    <div class="points">9999</div>
+  </div>
+
+  <div class="card">
+    <div class="rank">2</div>
+    <div class="name">Nelk3311</div>
+    <div class="points">8700</div>
+  </div>
+
+</div>
+
+</body>
+</html>
