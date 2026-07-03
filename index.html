@@ -2,6 +2,8 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AstroGDPS Slayer List SaweN's Edition</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
@@ -13,7 +15,7 @@
   --glass:rgba(255,255,255,0.06);
   --border:rgba(255,255,255,0.12);
   --accent:#fff;
-  --shadow: 0 10px 30px rgba(0,0,0,0.6);
+  --shadow:0 10px 30px rgba(0,0,0,0.6);
 }
 
 body{
@@ -23,9 +25,13 @@ body{
   color:#fff;
   min-height:100vh;
   overflow-x:hidden;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
-/* grid background */
+/* GRID BACKGROUND */
 .bg{
   position:fixed;
   inset:0;
@@ -40,26 +46,32 @@ body{
 
 /* HEADER */
 .top{
+  width:100%;
+  max-width:520px;
+  box-sizing:border-box;
+
   position:sticky;
   top:0;
   z-index:10;
-  padding:14px 18px;
+
+  padding:14px;
   backdrop-filter: blur(18px);
   background:rgba(0,0,0,0.55);
   border-bottom:1px solid var(--border);
+
   display:flex;
   justify-content:space-between;
   align-items:center;
+
   box-shadow: var(--shadow);
 }
 
 .logo{
   font-family:Anton;
-  font-size:20px;
-  letter-spacing:2px;
+  font-size:18px;
+  letter-spacing:1px;
 }
 
-/* FAQ */
 .faq{
   padding:8px 12px;
   border-radius:10px;
@@ -76,24 +88,31 @@ body{
 
 /* LIST */
 .container{
-  padding:18px;
+  width:100%;
+  max-width:520px;
+  box-sizing:border-box;
+
+  padding:14px;
   display:flex;
   flex-direction:column;
-  gap:14px;
+  gap:12px;
 }
 
 /* CARD */
 .card{
   background:var(--glass);
   border:1px solid var(--border);
-  border-radius:18px;
-  padding:18px;
+  border-radius:16px;
+  padding:16px;
+
   display:flex;
   justify-content:space-between;
   align-items:center;
+
   box-shadow: var(--shadow);
-  transition:0.25s;
   backdrop-filter: blur(12px);
+
+  transition:0.2s;
 }
 
 .card:hover{
@@ -102,17 +121,14 @@ body{
 
 .rank{
   font-family:Anton;
-  font-size:30px;
-  width:60px;
-  color:#fff;
-  opacity:0.9;
+  font-size:26px;
+  width:50px;
 }
 
 .name{
   flex:1;
   font-family:Anton;
-  font-size:24px;
-  letter-spacing:1px;
+  font-size:22px;
   overflow:hidden;
   text-overflow:ellipsis;
   white-space:nowrap;
@@ -120,8 +136,7 @@ body{
 
 .points{
   font-family:Anton;
-  font-size:24px;
-  color:#fff;
+  font-size:22px;
 }
 </style>
 </head>
